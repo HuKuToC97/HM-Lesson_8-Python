@@ -1,8 +1,4 @@
-import os
 
-from ui import *
-from logger import *
-from date_create import *
 
 def input_surname():
     return input('Введите фамилию контакта: ')

@@ -1,8 +1,10 @@
 import os
 
-from ui import *
 from logger import *
-from date_create import *
+from create_data import *
+from search_data import *
+from copy_data import *
+from additional_functions import *
 
 
 def interface():
@@ -10,19 +12,15 @@ def interface():
         pass
     os.system('cls||clear')
     command = '-1'
-    while command != '4':
+    while command != '5':
         print('Возможные варианты взаимодействия: \n\
             1) Добавить контакт\n\
             2) Вывести весь справочник на экран\n\
             3) Поиск контакта в справочнике\n\
-            4) Выход из программы\n')
+            4) Копирование контакта из справочника\n\
+            5) Выход из программы\n')
         
-        command = input_and_check_correct('Введите номер действия: ', ('1', '2', '3', '4'))
-        # command = input('Введите номер действия: ')
-
-        # while command not in ('1', '2', '3', '4'):
-        #     print('Некорректные данные')
-        #     command = input('Введите номер действия: ')
+        command = input_data_and_check_correct('Введите номер действия: ', ('1', '2', '3', '4','5'))
         
         os.system('cls||clear')
 
@@ -34,6 +32,7 @@ def interface():
             case '3':
                 search_contact()
             case '4':
+                copy_contact()
+            case '5':
                 print('Всего хорошего')
-    # return
 
