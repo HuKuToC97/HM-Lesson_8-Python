@@ -13,3 +13,9 @@ def input_data_and_check_correct(messege, range_data):
 
     return data_input
 
+def count_str_in_file(file_path):
+    line_count = 0
+    with open(file_path, 'r') as file:
+        for line in file:
+            line_count += 1
+    return line_count

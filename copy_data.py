@@ -38,7 +38,9 @@ def copy_contact():
                     search_contact()
                 case '3':
                     return
-
+        
+        contact_serial_num_for_copy = input_data_and_check_correct('Введите номер контакта для копирования', \
+                                                                   count_str_in_file('phonebook.txt'))
     
 
     print('\nКонтакт скопирован!')
