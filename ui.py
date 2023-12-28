@@ -8,8 +8,7 @@ from additional_functions import *
 
 
 def interface():
-    with open('phonebook.txt', 'a', encoding='UTF-8'):
-        pass
+    create_txt_file('phonebook')
     os.system('cls||clear')
     command = '-1'
     while command != '5':
@@ -17,7 +16,7 @@ def interface():
             1) Добавить контакт\n\
             2) Вывести весь справочник на экран\n\
             3) Поиск контакта в справочнике\n\
-            4) Копирование контакта из справочника\n\
+            4) Копирование контакта из справочника в новый файл\n\
             5) Выход из программы\n')
         
         command = input_data_and_check_correct('Введите номер действия: ', ('1', '2', '3', '4','5'))
@@ -34,5 +33,5 @@ def interface():
             case '4':
                 copy_contact()
             case '5':
-                print('Всего хорошего')
+                print('Спасибо, что выбрали нашу программу.\nДо свидания!')
 
